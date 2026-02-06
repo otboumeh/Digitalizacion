@@ -1,42 +1,29 @@
-main{
-    top: 1rem;
-}
-
-.products a::before{
-    content: "";
-    width: 100%;
-    height: 3px;
-    background-color: #222629;
-    position: absolute;
-    bottom: -4px;
-}
-
-h2{
-    width: 100%;
-    text-align:center ;
-    font-family: "Libre Baskerville", serif;
-    font-weight: 900;
-    text-transform: uppercase;
-    font-size: 2.5vw;
-    margin: 50px 0px;
-}
-
-main{
+/* --- CONFIGURACIÓN GENERAL --- */
+main {
     width: 100%;
     margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: auto;
+    position: relative;
+    top: 5rem;
 }
 
-.productsTypes{
+.productsTypes {
     width: 100%;
     display: flex;
     flex-direction: column;
-    height: 200vw;
+    height: auto;
+    padding-bottom: 50px;
 }
 
-.type{
+/* OCULTAR CHECKBOXES (Esto arregla el problema de los cuadros a la izquierda) */
+.checkProduct {
+    display: none !important;
+}
+
+.type {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -44,9 +31,21 @@ main{
     justify-content: center;
     align-items: center;
     padding-top: 3vw;
+    margin-bottom: 80px;
 }
 
-.productsSection{
+h2 {
+    width: 100%;
+    text-align: center;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 2.5vw;
+    margin: 50px 0px;
+    color: #222629;
+}
+
+.productsSection {
     position: relative;
     width: 85%;
     height: 37vw;
@@ -56,7 +55,7 @@ main{
     gap: 2vw;
 }
 
-.product{
+.product {
     position: relative;
     width: 28%;
     height: 100%;
@@ -67,173 +66,74 @@ main{
     overflow: hidden;
     transition: 0.3s ease-in-out;
     cursor: pointer;
+    background: #fff;
+    z-index: 5;
 }
 
-.productImg img{
+.productImg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.moreInfo{
-    display: flex;
-    flex-direction: column;
-    height: 15%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.moreInfo h3{
-    display: flex;
-    color: #222629;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    width: 100%;
-    left: 0px;
-    top: 2%;
-}
-
-.moreInfo p{
-    height: 0%;
-    display: none;
-}
-
-.ProductDescription{
+.ProductDescription {
     position: absolute;
     width: 62%;
     height: 35vw;
     left: 3vw;
-    opacity: 0%;
-    z-index: -111;
-    border-radius: 10px;
-    transition-delay: 0.3s;
+    opacity: 0;
+    z-index: -1;
     transition: 0.3s ease;
-    font-family: "Libre Baskerville", serif;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 1vw 0px;
+    justify-content: center;
 }
 
-.ProductDescription h1{
+.ProductDescription h1 {
     font-size: 2.5vw;
     color: #31708E;
-    margin: 0px;
+    font-family: "Libre Baskerville", serif;
+    margin: 0;
 }
 
-.ProductDescription p{
-    font-size: 1.5vw;   
+.ProductDescription p {
+    font-size: 1.5vw;
     font-family: "Arima", system-ui;
     text-align: justify;
     width: 90%;
 }
 
-.ProductDescription .icons{
-    display: flex;
-    width: 100%;
-    height: 45%;
-    position: relative;
-    bottom: 0vw;
+/* --- LÓGICA DE ANIMACIÓN (IDÉNTICA PARA TODAS LAS SECCIONES) --- */
+
+/* Click en Producto 1 */
+.checkProduct1:checked ~ .product1 { transform: translateX(227.5%); z-index: 100; }
+.checkProduct1:checked ~ .product2, .checkProduct1:checked ~ .product3 { opacity: 0; visibility: hidden; }
+.checkProduct1:checked ~ .ProductDescription1 { opacity: 1; z-index: 10; }
+
+/* Click en Producto 2 */
+.checkProduct2:checked ~ .product2 { transform: translateX(113.5%); z-index: 100; }
+.checkProduct2:checked ~ .product1, .checkProduct2:checked ~ .product3 { opacity: 0; visibility: hidden; }
+.checkProduct2:checked ~ .ProductDescription2 { opacity: 1; z-index: 10; }
+
+/* Click en Producto 3 */
+.checkProduct3:checked ~ .product3 { z-index: 100; }
+.checkProduct3:checked ~ .product1, .checkProduct3:checked ~ .product2 { opacity: 0; visibility: hidden; }
+.checkProduct3:checked ~ .ProductDescription3 { opacity: 1; z-index: 10; }
+
+/* FOOTER */
+footer {
+    margin-top: 100px;
+    background-color: #222629;
+    color: white;
+    padding: 40px 0;
 }
 
-.icons .column{
-    display: flex;
-    flex-direction: column;
-    width: 48%;
-    grid-gap: 10px;
-    position: relative;
-    bottom: 0px;
-}
-.icons .column div{
-    display: flex;
-    flex-direction: row;
-
-}
-.column div span{
-    font-size: 1.3vw;   
-    font-family: "Arima", system-ui;
-}
-
-.column div i{
-    font-size: 1.5vw;  
-    width: 1vw;
-    height: 1vw;
-    margin-right:2vw ; 
-    color: #8FC1E3;
-}
-
-.checkProduct1, .checkProduct2, .checkProduct3{
-    display: none;
-}
-
-.checkProduct1:checked ~ .product1{
-    transform: translateX(227.5%) ;
-    z-index: 111;
-}
-
-.checkProduct1:checked ~ .product2 {
-    transform: translatex(113.5%);
-    z-index: 11;
-    opacity: 0%;
-    box-shadow: none;
-}
-
-.checkProduct1:checked ~ .product3 {
-    box-shadow: none;
-    opacity: 0%;
-}
-
-.checkProduct1:checked ~ .ProductDescription1 {
-    opacity: 100%;
-}
-
-
- .checkProduct2:checked ~ .product1{
-    transform: translateX(227.5%) ;
-    z-index: 1;
-    opacity: 0%;
-    box-shadow: none;
-}
-
-.checkProduct2:checked ~ .product2 {
-    transform: translatex(113.5%);
-    z-index: 11;
-}
-.checkProduct2:checked ~ .product3 {
-    box-shadow: none;
-    opacity: 0%;
-}
-
-.checkProduct2:checked ~ .ProductDescription2 {
-    opacity: 100%;
-}
-
-.checkProduct3:checked ~ .product1{
-    transform: translateX(227.5%) ;
-    z-index: 1;
-    opacity: 0%;
-}
-
-.checkProduct3:checked ~ .product2 {
-    transform: translatex(113.5%);
-    z-index: 11;
-    opacity: 0%;
-}
-.checkProduct3:checked ~ .product3 {
-    z-index: 111;
-}
-.checkProduct3:checked ~ .ProductDescription3 {
-    opacity: 100%;
-}
-
-footer{
-    margin-top: 31vh;
-}
-
+/* RESPONSIVE */
 @media only screen and (max-width: 768px) {
-    .products a::before{
-        width: 0px;
-    }
+    h2 { font-size: 6vw; }
+    .productsSection { height: auto; flex-direction: column; gap: 20px; }
+    .product { width: 90%; height: 60vw; }
+    .ProductDescription { position: relative; width: 100%; opacity: 1; height: auto; left: 0; display: block; }
+    .ProductDescription h1 { font-size: 8vw; }
+    .ProductDescription p { font-size: 4vw; }
 }

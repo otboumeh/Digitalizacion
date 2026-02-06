@@ -1,4 +1,5 @@
-.about a::before{
+/* Estilo del enlace activo en el nav */
+.about a::before {
     content: "";
     width: 100%;
     height: 3px;
@@ -7,134 +8,133 @@
     bottom: -4px;
 }
 
-main{
-    padding-top: 50px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-main h2{
+main {
+    padding-top: 100px;
     width: 100%;
-    text-align:center ;
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f4;
+    min-height: 120vh;
+}
+
+.subjectsContainer {
+    width: 90%;
+    max-width: 1200px;
+}
+
+h2 {
+    text-align: center;
     font-family: "Libre Baskerville", serif;
     font-weight: 900;
     text-transform: uppercase;
-    font-size: 2vw;
-    margin: 50px 0px;
+    font-size: 2.5vw;
+    margin-bottom: 50px;
 }
 
-main h3{
-    width: 100%;
-    text-align:left ;
-    font-family: "Libre Baskerville", serif;
-    font-weight: 500;
-    text-transform: capitalize;
-    font-size: 1.5vw;
-}
-
-main .contents{
-    position: relative;
-    left: 10%;
-    width: 60%;
-}
-
-main .contents p{
-    text-align: justify;
-    line-height: 25px;
-}
-
-.subcontent{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-    gap: 1%;
-}
-
-.subcontent div{
-    width: 49%;
-    height: 500px;
-    object-fit: cover;    
-}
-
-.subcontent div img{
-    width: 100%;
-    height: 100%;
-}
-
-main aside{
-    position: relative;
-    right: 10%;
-    width: 15%;
-    top: 3vw;
-    border-left: 1px solid #222629;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 3vw;
-}
-
-aside ul{
-    font-size: 1vw;
-    padding-left: 3vw;
-    text-wrap: nowrap;
-}
-
-.stores{
-    width: 123%;
+.subjectsList {
     display: flex;
     flex-direction: column;
+    gap: 15px;
+    position: relative;
 }
 
-.store{
-    display: flex;
+.subject-row {
+    position: relative;
     width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3vw 3vw;
-    border-radius: 10px;
-    border: 1px solid rgb(49, 112, 142, 50%);
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    margin-bottom: 50px;
-    gap: 2vw;
-}
-
-.storeInfo{
-    font-size: 1.1vw;
-    height: fit-content;
-}
-
-.storeInfo h3{
-    color: #31708E;
-}
-
-.storeInfo i{
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-    color: #8FC1E3;
-}
-
-.storeMap{
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
+/* Ocultar Radio Buttons */
+input[type="radio"] {
+    display: none;
+}
+
+/* Tarjeta de la Asignatura (La "fila") */
+.subject-card {
+    width: 35%; /* Ancho inicial */
+    height: 80px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transition: all 0.5s ease-in-out;
+    z-index: 5;
+    margin-left: auto; /* Empuja las tarjetas a la derecha inicialmente */
+}
+
+.subject-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.subject-card h3 {
+    font-family: "Roboto Slab", serif;
+    font-size: 1.2vw;
+    color: #222629;
+}
+
+/* Contenido de Detalles (El que aparece a la izquierda) */
+.subject-details {
+    position: absolute;
+    left: 0;
+    width: 60%;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.5s ease-in-out;
+    pointer-events: none;
+    padding: 20px;
+}
+
+.subject-details h1 {
+    color: #31708E;
+    font-family: "Libre Baskerville", serif;
+    font-size: 2.2vw;
+    margin-bottom: 15px;
+}
+
+.subject-details p {
+    font-family: "Arima", serif;
+    font-size: 1.1vw;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Lógica de Selección (Lo que pasa al hacer clic) */
+
+/* 1. Mover la tarjeta seleccionada totalmente a la derecha */
+input[type="radio"]:checked + .subject-card {
+    width: 30%;
+    background-color: #31708E;
+}
+
+input[type="radio"]:checked + .subject-card h3 {
+    color: #fff;
+}
+
+/* 2. Mostrar los detalles correspondientes */
+input[type="radio"]:checked ~ .subject-details {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+/* Responsivo */
 @media only screen and (max-width: 768px) {
-    .about a::before{
-        width: 0px;
+    main { padding-top: 50px; }
+    h2 { font-size: 6vw; }
+    .subject-card { width: 100%; margin-left: 0; height: 60px; }
+    .subject-card h3 { font-size: 4vw; }
+    .subject-details { 
+        position: relative; 
+        width: 100%; 
+        display: none; 
     }
-
-    iframe{
-        width: 40vw;
-    }
-
-    aside ul{
-        font-size: 1.2vw;
-        padding-left: 3vw;
-        text-wrap: nowrap;
-    }
+    input[type="radio"]:checked ~ .subject-details { display: block; opacity: 1; transform: none; }
 }

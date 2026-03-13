@@ -1,4 +1,3 @@
-/* Estilo del enlace activo en el nav */
 .about a::before {
     content: "";
     width: 100%;
@@ -36,23 +35,21 @@ h2 {
     flex-direction: column;
     gap: 15px;
     position: relative;
+    min-height: 500px; 
 }
 
 .subject-row {
-    position: relative;
     width: 100%;
     display: flex;
     align-items: center;
 }
 
-/* Ocultar Radio Buttons */
 input[type="radio"] {
     display: none;
 }
 
-/* Tarjeta de la Asignatura (La "fila") */
 .subject-card {
-    width: 35%; /* Ancho inicial */
+    width: 35%; 
     height: 80px;
     background-color: #fff;
     border-radius: 10px;
@@ -63,7 +60,7 @@ input[type="radio"] {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     transition: all 0.5s ease-in-out;
     z-index: 5;
-    margin-left: auto; /* Empuja las tarjetas a la derecha inicialmente */
+    margin-left: auto; 
 }
 
 .subject-card img {
@@ -80,10 +77,10 @@ input[type="radio"] {
     color: #222629;
 }
 
-/* Contenido de Detalles (El que aparece a la izquierda) */
 .subject-details {
     position: absolute;
     left: 0;
+    top: 0; 
     width: 60%;
     opacity: 0;
     transform: translateX(-50px);
@@ -97,6 +94,7 @@ input[type="radio"] {
     font-family: "Libre Baskerville", serif;
     font-size: 2.2vw;
     margin-bottom: 15px;
+    margin-top: 0; 
 }
 
 .subject-details p {
@@ -106,9 +104,6 @@ input[type="radio"] {
     color: #444;
 }
 
-/* Lógica de Selección (Lo que pasa al hacer clic) */
-
-/* 1. Mover la tarjeta seleccionada totalmente a la derecha */
 input[type="radio"]:checked + .subject-card {
     width: 30%;
     background-color: #31708E;
@@ -118,14 +113,12 @@ input[type="radio"]:checked + .subject-card h3 {
     color: #fff;
 }
 
-/* 2. Mostrar los detalles correspondientes */
 input[type="radio"]:checked ~ .subject-details {
     opacity: 1;
     transform: translateX(0);
     pointer-events: auto;
 }
 
-/* Responsivo */
 @media only screen and (max-width: 768px) {
     main { padding-top: 50px; }
     h2 { font-size: 6vw; }
@@ -133,6 +126,7 @@ input[type="radio"]:checked ~ .subject-details {
     .subject-card h3 { font-size: 4vw; }
     .subject-details { 
         position: relative; 
+        top: auto; 
         width: 100%; 
         display: none; 
     }

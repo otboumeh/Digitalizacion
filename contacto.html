@@ -19,6 +19,15 @@
     <title>FAQS y Contacto - Automatización y Robótica</title>
 
     <script src="https://kit.fontawesome.com/38b1724369.js" crossorigin="anonymous"></script>
+    
+    <style>
+      /* Estilo extra para asegurar que el tour se vea bien */
+      .maps iframe {
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        margin-bottom: 20px;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -90,24 +99,24 @@
       </section>
 
       <div class="maps">
-        <h2>¿Dónde estamos?</h2>
-<iframe
-
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.957545648873!2d-2.9866738!3d43.2985861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e5a7a8b64365b%3A0x8a37cd3649a2ce76!2sCIFP%20Barakaldo%20LHII!5e0!3m2!1sen!2ses!4v1706530000000!5m2!1sen!2ses"
-
-width="600"
-
-height="450"
-
-style="border:0;"
-
-allowfullscreen=""
-
-loading="lazy"
-
-referrerpolicy="no-referrer-when-downgrade">
-
-</iframe>
+        <h2>Visita nuestro taller en 360°</h2>
+        <iframe id="tour-embeded" name="Barakaldo" src="https://tour.panoee.net/iframe/69a9a7bde6bc60fd433aee85" frameBorder="0" width="100%" height="600px" scrolling="no" allowvr="yes" allow="vr; xr; accelerometer; gyroscope; autoplay;" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" loading="eager"></iframe>
+        <script>
+          var pano_iframe_name = "tour-embeded";
+          window.addEventListener("devicemotion", function(e){ 
+            var iframe = document.getElementById(pano_iframe_name); 
+            if (iframe) iframe.contentWindow.postMessage({ 
+              type:"devicemotion", 
+              deviceMotionEvent:{ 
+                acceleration:{ x:e.acceleration.x, y:e.acceleration.y, z:e.acceleration.z }, 
+                accelerationIncludingGravity:{ x:e.accelerationIncludingGravity.x, y:e.accelerationIncludingGravity.y, z:e.accelerationIncludingGravity.z }, 
+                rotationRate:{ alpha:e.rotationRate.alpha, beta:e.rotationRate.beta, gamma:e.rotationRate.gamma }, 
+                interval:e.interval, 
+                timeStamp:e.timeStamp 
+              } 
+            }, "*"); 
+          });
+        </script>
       </div>
 
       <h2>¿Aún tienes dudas? Escríbenos</h2>
@@ -170,7 +179,7 @@ referrerpolicy="no-referrer-when-downgrade">
       </div>
       <div class="copyright">
         <hr />
-        <p>© FP BARAKALDO 2025 - Todos los derechos reservados.</p>
+        <p>© FP BARAKALDO 2026 - Todos los derechos reservados.</p>
       </div>
     </footer>
   </body>

@@ -17,7 +17,9 @@
 <body>
     <header>
         <div class="logo">
-            <a href="./index.html"><img src="./assets/img/logo.png" alt="Elorrieda Vending logo" /></a>
+            <a href="./index.html">
+                <img src="./assets/img/logo.png" alt="Elorrieda Vending logo" style="width: 100px; height: auto;" />
+            </a>
         </div>
         <nav>
             <input type="checkbox" id="menuCheckBox" />
@@ -31,9 +33,9 @@
         </nav>
     </header>
 
-    <main>
+<main>
         <div class="subjectsContainer">
-            <h2>Plan de Estudios: Automatización y Robótica</h2>
+            <h2>Plan de Estudios Detallado: Automatización y Robótica</h2>
             
             <div class="subjectsList">
                 <div class="subject-row">
@@ -42,21 +44,38 @@
                         <h3>SISTEMAS DE POTENCIA</h3>
                     </label>
                     <div class="subject-details">
-                        <h1>Sistemas de Potencia y Electricidad</h1>
-                        <p>Estudio de los fundamentos eléctricos, diseño de cuadros de potencia, protecciones y motores eléctricos. Es la base para entender cómo se alimentan las máquinas industriales.</p>
-                        [Image of an industrial electrical control panel wiring diagram]
+                        <h1>Sistemas de Potencia</h1>
+                        <p><strong>Horas Aula:</strong> 150h  <strong>Semanal:</strong> 5h</p>
+                        <ul>
+                            <li>Fundamentos eléctricos: Análisis de circuitos monofásicos y trifásicos.</li>
+                            <li>Uso avanzado de instrumentos de medida y toma de datos reales.</li>
+                            <li>Estudio de máquinas eléctricas de corriente alterna y transformadores.</li>
+                            <li>Motores asíncronos trifásicos: características, funcionamiento y curvas de par.</li>
+                            <li>Métodos de arranque: directo, estrella-triángulo y arrancadores suaves.</li>
+                            <li>Regulación mediante variadores de frecuencia y eficiencia energética.</li>
+                            <li>Prácticas de montaje, cableado y medida en paneles industriales.</li>
+                        </ul>
                     </div>
                 </div>
 
                 <div class="subject-row">
                     <input type="radio" name="subject-toggle" id="sub2">
                     <label class="subject-card" for="sub2">
-                        <h3>SISTEMAS ELECTRICOS,NEUMATICOS Y HIDRAULICOS</h3>
+                        <h3>SIST. ELÉCTRICOS, NEUMÁTICOS E HIDRÁULICOS</h3>
                     </label>
                     <div class="subject-details">
-                        <h1>Programación con Microcontroladores</h1>
-                        <p>Aprendemos el lenguaje C/C++ aplicado a placas Arduino. Control de sensores, actuadores, pantallas LCD y protocolos de comunicación serie.</p>
-                        [Image of an Arduino Uno board layout showing pins and components]
+                        <h1>Sistemas Eléctricos, Neumáticos e Hidráulicos </h1>
+                        <p><strong>Horas Aula:</strong> 150h  <strong>Semanal:</strong> 5h</p>
+                        <ul>
+                            <li>Simbología normalizada y diseño de esquemas eléctricos.</li>
+                            <li>Simulación de circuitos mediante software <strong>CADe Simu</strong>.</li>
+                            <li>Montaje de cuadros: bornas de conexión, carril DIN y canaletas.</li>
+                            <li>Dispositivos de mando: pulsadores, conmutadores y señalizadores.</li>
+                            <li>Protecciones industriales: magnetotérmicos, relés térmicos, diferenciales y guardamotores.</li>
+                            <li>Conmutación: estudio y cableado de contactores, relés y temporizadores.</li>
+                            <li>Sensores industriales: finales de carrera, sensores de proximidad y salida a transistor.</li>
+                            <li>Tecnologías de potencia: Introducción a sistemas neumáticos e hidráulicos.</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -66,19 +85,17 @@
                         <h3>SISTEMAS SECUENCIALES PROGRAMABLES</h3>
                     </label>
                     <div class="subject-details">
-                        <h1>Autómatas Programables</h1>
-                        <p>Programación de PLCs industriales (Siemens, Omron) usando lenguajes como Ladder (KOP), Grafcet y Texto Estructurado. Control de procesos automáticos reales.</p>
-                    </div>
-                </div>
-
-                <div class="subject-row">
-                    <input type="radio" name="subject-toggle" id="sub4">
-                    <label class="subject-card" for="sub4">
-                        <h3>DIGITALIZACIÓN</h3>
-                    </label>
-                    <div class="subject-details">
-                        <h1>Brazos Robóticos y Cobots</h1>
-                        <p>Configuración, calibración y programación de robots industriales de 6 ejes. Aprendemos a definir el TCP, trayectorias y seguridad en entornos colaborativos.</p>
+                        <h1>Sistemas Secuenciales Programables </h1>
+                        <p><strong>Horas Aula:</strong> 150h  <strong>Semanal:</strong> 5h</p>
+                        <ul>
+                            <li>Conceptos digitales: distinción entre señales analógicas y digitales (0 y 1).</li>
+                            <li>Sistemas de numeración: Binario, Decimal, Hexadecimal y Octal.</li>
+                            <li>Puertas lógicas fundamentales: AND, OR, NAND, NOR, XOR y XNOR.</li>
+                            <li>Simplificación de funciones: Álgebra de Boole y Teoremas de De Morgan.</li>
+                            <li>Programación de autómatas: Diseño y cableado con <strong>LOGO! Siemens</strong> y LOGO Soft.</li>
+                            <li>Arquitectura del PLC: Estudio de la estructura interna, memorias y ciclos de scan.</li>
+                            <li>Ventajas e inconvenientes del control programado frente al cableado.</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -88,41 +105,92 @@
                         <h3>SISTEMAS DE MEDIDA Y REGULACIÓN</h3>
                     </label>
                     <div class="subject-details">
-                        <h1>Redes y Protocolos</h1>
-                        <p>Interconexión de máquinas mediante Profinet, Modbus y Ethernet/IP. Gestión de datos industriales e IIoT.</p>
+                        <h1>Sistemas de Medida y Regulación </h1>
+                        <p><strong>Horas Aula:</strong> 150h  <strong>Semanal:</strong> 5h</p>
+                        <ul>
+                            <li>Análisis de circuitos: Aplicación de Ley de Ohm y Leyes de Kirchhoff.</li>
+                            <li>Cálculo de magnitudes: tensiones, corrientes y potencias en circuitos mixtos.</li>
+                            <li>Electrónica básica: resistencias, diodos, condensadores y transistores.</li>
+                            <li>Sistemas de control: circuitos de amplificación, oscilación y regulación.</li>
+                            <li>Instrumentación: uso de sensores ópticos, inductivos, capacitivos y de luminosidad.</li>
+                            <li>Metodología <strong>GRAFCET</strong> para la representación de secuencias lógicas.</li>
+                            <li>Prácticas de montaje en protoboard y simulación de sistemas automáticos.</li>
+                        </ul>
                     </div>
                 </div>
 
                 <div class="subject-row">
                     <input type="radio" name="subject-toggle" id="sub6">
                     <label class="subject-card" for="sub6">
-                        <h3>INFORMÁTICA IDUSTRIAL</h3>
+                        <h3>INFORMÁTICA INDUSTRIAL</h3>
                     </label>
                     <div class="subject-details">
-                        <h1>Sistemas SCADA y HMI</h1>
-                        <p>Diseño de interfaces hombre-máquina y sistemas de supervisión y control de datos para monitorizar fábricas en tiempo real.</p>
+                        <h1>Informática Industrial </h1>
+                        <p><strong>Horas Aula:</strong> 90h  <strong>Semanal:</strong> 3h</p>
+                        <ul>
+                            <li>Arquitectura de computadores: procesadores, memorias RAM y buses de datos.</li>
+                            <li>Pensamiento computacional: estructuración de problemas y diseño de algoritmos.</li>
+                            <li>Programación industrial: control de sistemas mediante lenguaje <strong>LADDER</strong>.</li>
+                            <li>Proyectos prácticos: control de cintas transportadoras, ascensores y semáforos.</li>
+                            <li>Uso de plataformas didácticas para aprendizaje de electrónica y software.</li>
+                            <li>Documentación técnica: importancia de la comunicación digital en proyectos industriales.</li>
+                        </ul>
                     </div>
                 </div>
 
                 <div class="subject-row">
-                    <input type="radio" name="subject-toggle" id="sub7">
-                    <label class="subject-card" for="sub7">
-                        <h3>EMPLEABILIDAD</h3>
+                    <input type="radio" name="subject-toggle" id="sub4">
+                    <label class="subject-card" for="sub4">
+                        <h3>DIGITALIZACIÓN</h3>
                     </label>
                     <div class="subject-details">
-                        <h1>Sensores y Transductores</h1>
-                        <p>Calibración y uso de sensores de presión, temperatura, visión artificial y posicionamiento láser.</p>
+                        <h1>Digitalización Aplicada </h1>
+                        <p><strong>Horas Aula:</strong> 60h  <strong>Semanal:</strong> 2h</p>
+                        <ul>
+                            <li>Introducción a la <strong>Industria 4.0</strong> y la interconexión de sistemas.</li>
+                            <li>Gestión masiva de datos y recopilación de información en planta.</li>
+                            <li><strong>Blockchain:</strong> Trazabilidad, seguridad y transparencia en la logística industrial.</li>
+                            <li><strong>Cloud Computing:</strong> Almacenamiento y procesamiento en servidores remotos.</li>
+                            <li>Impacto socio-laboral: adaptación a los nuevos entornos económicos digitales.</li>
+                        </ul>
                     </div>
                 </div>
 
+                <!-- SOSTENIBILIDAD -->
                 <div class="subject-row">
                     <input type="radio" name="subject-toggle" id="sub8">
                     <label class="subject-card" for="sub8">
                         <h3>SOSTENIBILIDAD</h3>
                     </label>
                     <div class="subject-details">
-                        <h1>Neumática e Hidráulica</h1>
-                        <p>Diseño de circuitos de aire comprimido, válvulas, actuadores y electro-neumática aplicada a la automatización.</p>
+                        <h1>Sostenibilidad </h1>
+                        <p><strong>Horas Aula:</strong> 30h  <strong>Semanal:</strong> 1h</p>
+                        <ul>
+                            <li>Eficiencia energética: optimización del consumo en sistemas robotizados.</li>
+                            <li>Gestión de residuos: tratamiento de materiales y aceites industriales.</li>
+                            <li>Economía circular aplicada al mantenimiento y diseño de maquinaria.</li>
+                            <li>Normativas ambientales y huella de carbono en la producción automatizada.</li>
+                            <li>Conciencia profesional para la toma de decisiones técnicas responsables.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="subject-row">
+                    <input type="radio" name="subject-toggle" id="sub7">
+                    <label class="subject-card" for="sub7">
+                        <h3>EMPLEABILIDAD </h3>
+                    </label>
+                    <div class="subject-details">
+                        <h1>Itinerario para la Empleabilidad </h1>
+                        <p><strong>Horas Aula:</strong> 120h  <strong>Semanal:</strong> 4h</p>
+                        <ul>
+                            <li><strong>Prevención de Riesgos:</strong> Evaluación de puestos, EPIs y planes de emergencia.</li>
+                            <li><strong>Primeros Auxilios:</strong> Técnicas de clasificación de heridos y uso del botiquín.</li>
+                            <li><strong>Derecho Laboral:</strong> Nóminas, contratos, convenios y papel de los sindicatos.</li>
+                            <li><strong>Búsqueda de Empleo:</strong> Diseño de CV profesional y Portfolio (Google Sites).</li>
+                            <li><strong>Análisis Personal:</strong> Realización de DAFO/CAME para mejorar competencias transversales.</li>
+                            <li>Igualdad: análisis de planes de igualdad y resolución de conflictos laborales.</li>
+                        </ul>
                     </div>
                 </div>
             </div>

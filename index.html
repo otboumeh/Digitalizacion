@@ -59,24 +59,22 @@
     ></script>
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <a href="./index.html">
-          <img src="./assets/img/logo.png" alt="Elorrieta Vending logo" class ="imgmia"/>
-        </a>
-      </div>
-      <nav>
-        <input type="checkbox" id="menuCheckBox" />
-        <label class="burgerMenuContainer" for="menuCheckBox">
-          <span class="burgerMenu"></span>
-        </label>
-        <ul>
-          <li class="home"><a href="./index.html">Inicio</a></li>
-          <li class="about"><a href="./acerca.html">Plan de Estudios</a></li>
-          <li class="products"><a href="./productos.html">Asignaturas</a></li>
-          <li class="contact"><a href="./contacto.html">FAQS</a></li>
-        </ul>
-      </nav>
+<header>
+        <div class="logo">
+            <a href="./index.html">
+                <img src="./assets/img/logo.png" alt="Elorrieda Vending logo" style="width: 100px; height: auto;" />
+            </a>
+        </div>
+        <nav>
+            <input type="checkbox" id="menuCheckBox" />
+            <label class="burgerMenuContainer" for="menuCheckBox"><span class="burgerMenu"></span></label>
+            <ul>
+                <li class="home"><a href="./index.html">Inicio</a></li>
+                <li class="about"><a href="./acerca.html">Plan de Estudios</a></li>
+                <li class="products"><a href="./productos.html">Asignaturas</a></li>
+                <li class="contact"><a href="./contacto.html">FAQS</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
@@ -115,53 +113,57 @@
         </p>
       </div>
 
-     <div class="productsSection">
+<div class="productsSection">
   <h2>Nuestras Asignaturas</h2>
-  <div class="productTypes">
-    <a class="type type1" href="./productos.html#T1">
-      <div class="productImg">
-        <img src="./assets/img/potencia.jpg" alt="the photo of a snack vending machine" style="width: 100%;" />
+  
+  <!-- Añadimos un estilo al contenedor principal por si acaso -->
+  <div class="productTypes" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+    
+    <a class="type type1" href="./productos.html#T1" style="display: flex; flex-direction: column; text-decoration: none; width: 300px;">
+      <div class="moreInfo" style="position: static; text-align: center; margin-bottom: 15px; transform: none; opacity: 1;">
+        <h3 style="color: #222629; margin: 0; font-size: 1.3rem;">Sistemas de potencia</h3>
       </div>
-      <div class="moreInfo">
-        <h3>sistemas de potencia</h3>
-      </div>
-    </a>
-
-    <a class="type type2" href="./productos.html#T2">
-      <div class="productImg">
-        <img src="./assets/img/auto.jpeg" alt="the photo of a cold drinks vending machine" />
-      </div>
-      <div class="moreInfo">
-        <h3>Sistemas secuenciales programables</h3>
+      <div class="productImg" style="width: 100%;">
+        <img src="./assets/img/potencia.jpg" alt="Sistemas de potencia" style="width: 100%; border-radius: 10px; display: block;" />
       </div>
     </a>
 
-    <a class="type type3" href="./productos.html#T3">
-      <div class="productImg">
-        <img src="./assets/img/electricos.jpeg" alt="the photo of a combination vending machine" />
+    <a class="type type2" href="./productos.html#T2" style="display: flex; flex-direction: column; text-decoration: none; width: 300px;">
+      <div class="moreInfo" style="position: static; text-align: center; margin-bottom: 15px; transform: none; opacity: 1;">
+        <h3 style="color: #222629; margin: 0; font-size: 1.3rem;">Sistemas secuenciales programables</h3>
       </div>
-      <div class="moreInfo">
-        <h3>Sist electricos,neumaticos y hidraulicos</h3>
-      </div>
-    </a>
-
-    <a class="type type4" href="./productos.html#T4">
-      <div class="productImg">
-        <img src="./assets/img/regulacion.jpeg" alt="the photo of a hot drinks vending machine" />
-      </div>
-      <div class="moreInfo">
-        <h3>Sistemas de medida y regulación</h3>
+      <div class="productImg" style="width: 100%;">
+        <img src="./assets/img/auto.jpeg" alt="Sistemas secuenciales programables" style="width: 100%; border-radius: 10px; display: block;" />
       </div>
     </a>
 
-    <a class="type type5" href="./productos.html#T5">
-      <div class="productImg">
-        <img src="./assets/img/arduino.jpg" alt="the photo of a snack vending machine" />
+    <a class="type type3" href="./productos.html#T3" style="display: flex; flex-direction: column; text-decoration: none; width: 300px;">
+      <div class="moreInfo" style="position: static; text-align: center; margin-bottom: 15px; transform: none; opacity: 1;">
+        <h3 style="color: #222629; margin: 0; font-size: 1.3rem;">Sist. eléctricos, neumáticos e hidráulicos</h3>
       </div>
-      <div class="moreInfo">
-        <h3>Informatica industrial</h3>
+      <div class="productImg" style="width: 100%;">
+        <img src="./assets/img/electricos.jpeg" alt="Sistemas eléctricos, neumáticos e hidráulicos" style="width: 100%; border-radius: 10px; display: block;" />
       </div>
     </a>
+
+    <a class="type type4" href="./productos.html#T5" style="display: flex; flex-direction: column; text-decoration: none; width: 300px;">
+      <div class="moreInfo" style="position: static; text-align: center; margin-bottom: 15px; transform: none; opacity: 1;">
+        <h3 style="color: #222629; margin: 0; font-size: 1.3rem;">Sistemas de medida y regulación</h3>
+      </div>
+      <div class="productImg" style="width: 100%;">
+        <img src="./assets/img/regulacion.jpeg" alt="Sistemas de medida y regulación" style="width: 100%; border-radius: 10px; display: block;" />
+      </div>
+    </a>
+
+    <a class="type type5" href="./productos.html#T2" style="display: flex; flex-direction: column; text-decoration: none; width: 300px;">
+      <div class="moreInfo" style="position: static; text-align: center; margin-bottom: 15px; transform: none; opacity: 1;">
+        <h3 style="color: #222629; margin: 0; font-size: 1.3rem;">Informática industrial</h3>
+      </div>
+      <div class="productImg" style="width: 100%;">
+        <img src="./assets/img/arduino.jpg" alt="Informática industrial" style="width: 100%; border-radius: 10px; display: block;" />
+      </div>
+    </a>
+
   </div>
 </div>
 
